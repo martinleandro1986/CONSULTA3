@@ -1,0 +1,73 @@
+/* box model*/
+/* wid  h, height, padding, margin*/
+
+/*default box-sizing: content-box*/
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+.contenedor{
+    position:relative;
+    width:400px;
+    height: 400px;
+    background-color: blue;
+
+}
+
+.caja{
+    padding: 1rem;
+    position:absolute;
+    top:0;
+    right:0;
+    background-color: red;
+    width:0;
+    height:0;
+}
+
+.whatsapp {
+    position:fixed;
+    bottom:1rem;
+    right:1rem;
+}
+
+#root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.mainContent{
+    flex-grow: 1;
+    display: flex;
+}
+
+.mainContent main {
+    flex-grow: 1;
+}
+
+/*flex grow para que crezca-flex shrink para que se achique
+-flex basis es igual al ancho o alto según la dirección q tenga*/
+
+header{
+    border-bottom: 1px solid black ;
+    min-height: 40px;
+}
+
+nav{
+    border-right: 1px solid black;
+    width:80px;
+    transition: 400ms ease-in-out
+}
+
+nav:hover {
+    width:150px;  /*cuando apoyas el mouse se abre*/
+}
+
+footer{
+    border-top: 1px solid black;
+    min-height: 40px;
+}
